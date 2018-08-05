@@ -2,9 +2,8 @@
 # Created: 8/3/2018
 # Last Updated: 8/5/2018
 # Mostly Containers for now
-# ---------------------------------------------
-import random
-from model import GameEnv, GameElement, Player, Tile
+# -----------------import random----------------------------
+from model import GameEnv, Player
 from VertexNode import VertexNode, MutablePair
 
 

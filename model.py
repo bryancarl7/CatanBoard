@@ -82,7 +82,7 @@ class Player(GameElement):
         self.hand = [0, 0, 0, 0, 0]
         self.dev = []
         self.pieces = [5, 4, 20]  # 5 settlements, 4 cities, and 20 roads (decrement for updates)
-        self.current_cities
+        self.current_cities = []
         self.vp = 0
 
     def add_cards(self, add_list):
