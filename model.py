@@ -71,7 +71,7 @@ class GameElement(object):
 
     def notify(self):
         for listener in self.listener:
-            pass # bit more coding to do here
+            pass  # bit more coding to do here
 
 
 # Relatively the same Player class, but more simple. Add any additions you feel like
@@ -79,9 +79,10 @@ class Player(GameElement):
     def __init__(self, number):
         super().__init__()
         self.number = number
-        self.hand = []
+        self.hand = [0, 0, 0, 0, 0]
         self.dev = []
         self.pieces = [5, 4, 20]  # 5 settlements, 4 cities, and 20 roads (decrement for updates)
+        self.current_cities
         self.vp = 0
 
     def add_cards(self, add_list):
@@ -106,17 +107,11 @@ class Player(GameElement):
             self.spend_cards([1, 2])
 
     def place_settlement(self):
-        total = 0
-        for i in self.hand:
-            if i == 1:
-                total += 1
-            elif i == 2:
-                total += 1
-            elif i == 3:
-                total += 1
-            elif i == 4:
-                total += 1
-        if total <= 4:
+        flag = True
+        for i in range(0,3):
+            if self.hand[i] <= 0:
+                flag = False
+        if flag:
             total += 1
             self.vp += 1
             self.pieces[0] -= 1

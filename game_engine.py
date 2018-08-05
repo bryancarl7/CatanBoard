@@ -5,6 +5,7 @@
 # ---------------------------------------------
 import random
 from model import GameEnv, GameElement, Player, Tile
+from VertexNode import VertexNode, MutablePair
 
 
 def main():
