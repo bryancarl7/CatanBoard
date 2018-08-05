@@ -2,9 +2,9 @@
 # Created: 8/3/2018
 # Last Updated: 8/5/2018
 # Mostly Containers for now
-# -----------------import random----------------------------
-from model import GameEnv, Player
-from VertexNode import VertexNode, MutablePair
+# ---------------------------------------------
+from model import Player
+from game_environment import GameEnv
 
 
 def main():
